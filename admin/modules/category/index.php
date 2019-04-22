@@ -1,8 +1,5 @@
 <?php
-    require_once __DIR__. "/autoload/autoload.php" ;
-    $db = new database ;
-    $category = $db -> fetchAll("category") ;
-    var_dump($category);
+    require_once __DIR__. "/../../autoload/autoload.php" ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -128,16 +125,50 @@
       </li>
     </ul>
     <div id="content-wrapper">
-      <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">xin chào bạn đến với trang admin</a>
-          </li>
-          <li class="breadcrumb-item active">Overview</li>
-        </ol>
+      <h1>DANH SÁCH DANH MỤC <a href="add.php" class="btn btn-success">thêm mới</a></h1>
+        <div class="container-fluid">
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Danh mục</a>
+            </li>
+            <li class="breadcrumb-item active">Overview</li>
+          </ol>
+        </div>
+          <div class="table-category">
+            <table style="width:100%">
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th> 
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+              </tr>
+            </table>
       </div>
-    </div>  
+       <div id="pagination" class="text-center">
+          <a href="#">&laquo;</a>
+          <a href="#">1</a>
+          <a class="active" href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
+        </div>  
 </div>
   <!-- Bootstrap core JavaScript-->
   <script src="/didong/public/admin/js/jquery.min.js"></script>
